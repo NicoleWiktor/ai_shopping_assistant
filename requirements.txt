@@ -1,0 +1,8 @@
+python-dotenv>=1.0.1
+typing_extensions>=4.9.0
+openai>=1.40.0
+langchain-openai>=0.2.2
+langgraph>=0.2.35
+langchain-tavily>=0.1.1
+streamlit>=1.37.0
+requests>=2.31.0
