@@ -2,6 +2,7 @@ from typing import TypedDict, Optional, List, Dict, Any
 
 class State(TypedDict):
 	query: str
+	original_query: str  # Store the initial user query, never changes
 	urls: List[str]
 	products: List[Dict[str, Any]]  # [{product_name, product_price, product_review_summary, url}]
 	approved: Optional[bool]
@@ -14,6 +15,7 @@ class State(TypedDict):
 def make_initial_state(query: str) -> "State":
 	return {
 		"query": query,
+		"original_query": query,  # Save the original
 		"urls": [],
 		"products": [],
 		"approved": None,
